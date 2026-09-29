@@ -1,0 +1,44 @@
+:root {
+    --color-light: #f4f4f4;
+    --color-orange: #ff6600;
+    /* Alpha por conta que a cor será usada em fundo trasnparente. */
+    --color-orange-alpha: rgba(255, 102, 0, .15);
+    --color-dark: #111;
+    --color-black: #000;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: var(--color-black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.hero {
+    /* Fazer w100% + ENTER.*/
+    width: 100%;
+    /* VH é view port high, porém apenas o dvh consegue detectar a barra inferior do celular. */
+    height: 100dvh;
+    background-image: url(../images/motos/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* center ou 50% 
+    Curiosidade "center center" aplica separado, pois usa o lado esquerdo e superior para achar a posição. */
+    background-position: center;
+}
