@@ -42,3 +42,40 @@ ul, ol {
     Curiosidade "center center" aplica separado, pois usa o lado esquerdo e superior para achar a posição. */
     background-position: center;
 }
+
+.header-hero {
+    /* Como a largura fica auto, nao precisa por ele. */
+    height: 100px;
+    /* O flex deixa os elementos um ao lado do outro - "flex-direction: row".
+    Ele so aplica para os filhos dele! Funciona para container (caixa)! */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--spacing-lg);
+
+    /* nesting CSS */
+    h1 {
+        font-size: 38px;
+        color: var(--color-light);
+
+        span {
+            color: var(--color-orange);
+        }
+    }
+}
+
+.header-menu {
+    display: flex;
+    /* O gap aplica espaco entre os elementos. Elele funcina apenas com felx e com grid. */
+    gap: var(--spacing-lg);
+}
+
+/* Outra forma. */
+.header-menu a {
+    font-weight: 700;
+
+    transition: .7s;
+    &:hover {
+        color: var(--color-orange);
+    }
+}
